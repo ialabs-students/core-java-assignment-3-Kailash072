@@ -1,24 +1,23 @@
-package Quesion_three;
- 
+package assigment3;
+
+import java.util.Scanner;
+
 public class WrapperClassConvert 
 {
 
 	public static void main(String[] args) 
 	{
-		int num = 10;
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Sample Input : ");
+		int num;
+		num = sc.nextInt();
 		System.out.println("After convertion : " + convertToWrapper(num));
 	}
 
 	public static Object convertToWrapper(Object value)
 	{
 
-		Class valueClass = value.getClass();
-		
-		if (value == null || valueClass.isPrimitive())
-		{
-			System.out.println("Enter valid primitive as input");
-		}
-		
 		Integer temp_obj = Integer.valueOf((int) value);
 
 		if (temp_obj instanceof Integer) 
@@ -35,3 +34,4 @@ public class WrapperClassConvert
 
 	}
 }
+
